@@ -3,7 +3,8 @@ class CreateDogs < ActiveRecord::Migration
   end
 
   def down
-    t.string :name
-    t.string :breed
+    create_table :dogs do |t|
+      t.string :name
+      t.string :breed
   end
 end
